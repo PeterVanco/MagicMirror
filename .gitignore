@@ -66,6 +66,8 @@ Temporary Items
 !/modules/default/**
 !/modules/README.md**
 
+!/modules/MMM-EARTH
+
 # Vim
 ## swap
 [._]*.s[a-w][a-z]
