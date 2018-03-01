@@ -14,5 +14,20 @@ html {
 }
 
 body {
+    font-family: "Roboto", sans-serif;
+}
 
+.light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
 }
