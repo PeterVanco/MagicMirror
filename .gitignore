@@ -54,24 +54,6 @@ Temporary Items
 .directory
 .Trash-*
 
-# Various Magic Mirror ignoramuses and anti-ignoramuses.
-
-# Don't ignore the node_helper core module.
-!/modules/node_helper
-!/modules/node_helper/**
-
-# Ignore all modules except the default modules.
-/modules/**
-!/modules/default
-!/modules/default/**
-!/modules/README.md**
-
-!/modules/MMM-EARTH
-!/modules/MMM-teamspeak3
-!/modules/MMM-RandomPhoto
-!/modules/MMM-MyCommute
-!/modules/MMM-TTS
-
 # Vim
 ## swap
 [._]*.s[a-w][a-z]
