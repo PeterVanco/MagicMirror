@@ -240,6 +240,33 @@ var config = {
                 speed: 1,
             }
         },
+	{
+	    module: 'MMM-Facial-Recognition-OCV3',
+	    config: {
+		// Threshold for the confidence of a recognized face before it's considered a
+		// positive match.  Confidence values below this threshold will be considered
+		// a positive match because the lower the confidence value, or distance, the
+		// more confident the algorithm is that the face was correctly detected.
+		threshold: 10,
+		// force the use of a usb webcam on raspberry pi (on other platforms this is always true automatically)
+		useUSBCam: true,
+		// Path to your training xml
+		trainingFile: '/home/pi/repo/MagicMirror/modules/MMM-Facial-Recognition-OCV3/training.xml',
+		// recognition intervall in seconds (smaller number = faster but CPU intens!)
+		interval: 1,
+		// Logout delay after last recognition so that a user does not get instantly logged out if he turns away from the mirror for a few seconds
+		logoutDelay: 5,
+		// Array with usernames (copy and paste from training script)
+		users: ['peter'],
+		//Module set used for strangers and if no user is detected
+		defaultClass: "default",
+		//Set of modules which should be shown for every user
+		everyoneClass: "everyone",
+		// Boolean to toggle welcomeMessage
+		welcomeMessage: true
+	    }
+	},
+
 	]
 
 };
