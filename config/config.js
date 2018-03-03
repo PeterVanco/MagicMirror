@@ -29,17 +29,17 @@ var config = {
     modules: [
         {
             module: "alert",
-            classes: "default",
+            classes: "default everyone",
         },
         {
             module: "updatenotification",
             position: "top_bar",
-            classes: "default",
+            classes: "default everyone",
         },
         {
             module: "clock",
             position: "top_left",
-            classes: "default",
+            classes: "default everyone",
         },
         {
             module: "calendar",
@@ -75,7 +75,7 @@ var config = {
             module: "weatherforecast",
             position: "top_right",
             header: 'Predpoveď počasia - ',
-            classes: "default",
+            classes: "default everyone",
             config: {
                 location: "Bratislava",
                 locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
@@ -86,7 +86,7 @@ var config = {
             module: "newsfeed",
             // position: "bottom_bar",
             position: "upper_third",
-            classes: "default",
+            classes: "default everyone",
             config: {
                 feeds: [
                     {
@@ -102,7 +102,7 @@ var config = {
             module: 'MMM-MyCommute',
             position: 'top_left',
             header: 'Cesta do práce',
-            classes: 'default',
+            classes: 'default everyone',
             config: {
                 apikey: 'AIzaSyBqaX-0g6G6idL4X8CMhqXwTE5TYTdWtB0',
                 origin: 'Sputniková 37, Bratislava',
@@ -155,7 +155,7 @@ var config = {
             module: 'MMM-teamspeak3',
             position: 'top_right',
             header: 'TeamSpeak',
-            classes: 'default',
+            classes: 'default everyone',
             config: {
                 host: '192.168.1.252',
                 serverPort: '9987', // Default server port (not required if default port (9987) is used)
@@ -170,7 +170,7 @@ var config = {
             module: 'MMM-RandomPhoto',
             position: 'top_right',
             header: 'Náhodná spomienka',
-            classes: 'everyone',
+            classes: 'everyone peter veronika',
             config: {
                 opacity: 1.0,
                 animationSpeed: 1000,
@@ -183,7 +183,7 @@ var config = {
         {
             module: 'MMM-TTS',
             position: 'top_right',
-            classes: 'default',
+            classes: 'default everyone',
             config: {
                 // debug: true,
                 voice: 'sk',
