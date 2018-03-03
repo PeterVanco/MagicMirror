@@ -13,6 +13,12 @@
 [submodule "modules/MMM-TTS"]
 	path = modules/MMM-TTS
 	url = https://github.com/PeterVanco/MMM-TTS.git
+	branch = master
 [submodule "modules/MMM-teamspeak3"]
 	path = modules/MMM-teamspeak3
 	url = https://github.com/PeterVanco/MMM-teamspeak3.git
+	branch = master
+[submodule "modules/MMM-Facial-Recognition-OCV3"]
+	path = modules/MMM-Facial-Recognition-OCV3
+	url = https://github.com/PeterVanco/MMM-Facial-Recognition-OCV3.git
+	branch = master
