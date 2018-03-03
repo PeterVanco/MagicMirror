@@ -217,6 +217,18 @@ var config = {
             }
         },
 
+        {
+            module: 'MMM-SystemStats',
+            position: 'bottom_right', // This can be any of the regions.
+            header: 'Systém',
+            classes: 'default everyone small dimmed', // Add your own styling. Optional.
+            config: {
+                updateInterval: 10000,
+                animationSpeed: 1000,
+                align: 'right', // align labels
+                //header: 'System Stats', // This is optional
+            },
+        },
     ]
 
 };

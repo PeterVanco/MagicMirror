@@ -22,3 +22,7 @@
 	path = modules/MMM-Facial-Recognition-OCV3
 	url = https://github.com/PeterVanco/MMM-Facial-Recognition-OCV3.git
 	branch = master
+[submodule "modules/MMM-SystemStats"]
+	path = modules/MMM-SystemStats
+	url = https://github.com/BenRoe/MMM-SystemStats
+	branch = master
