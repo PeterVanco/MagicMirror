@@ -96,7 +96,9 @@ Module.register("newsfeed",{
 
 		if (this.newsItems.length > 0) {
 
-			// this.config.showFullArticle is a run-time configuration, triggered by optional notifications
+            // this.sendNotification('MMM-TTS', this.newsItems[this.activeItem].title);
+
+            // this.config.showFullArticle is a run-time configuration, triggered by optional notifications
 			if (!this.config.showFullArticle && (this.config.showSourceTitle || this.config.showPublishDate)) {
 				var sourceAndTimestamp = document.createElement("div");
 				sourceAndTimestamp.className = "light small dimmed";

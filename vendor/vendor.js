@@ -13,7 +13,8 @@ var vendor = {
 	"weather-icons.css": "node_modules/weathericons/css/weather-icons.css",
 	"weather-icons-wind.css": "node_modules/weathericons/css/weather-icons-wind.css",
 	"font-awesome.css": "node_modules/font-awesome/css/font-awesome.min.css",
-	"nunjucks.js": "node_modules/nunjucks/browser/nunjucks.min.js"
+	"nunjucks.js": "node_modules/nunjucks/browser/nunjucks.min.js",
+	"require.js": "node_modules/browser-request/index.js"
 };
 
 if (typeof module !== "undefined"){module.exports = vendor;}

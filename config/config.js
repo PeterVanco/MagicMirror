@@ -9,19 +9,20 @@
  */
 
 var config = {
-	address: "localhost", // Address to listen on, can be:
+	address: "0.0.0.0", // Address to listen on, can be:
 	                      // - "localhost", "127.0.0.1", "::1" to listen on loopback interface
 	                      // - another specific IPv4/6 to listen on a specific interface
 	                      // - "", "0.0.0.0", "::" to listen on any interface
 	                      // Default, when address config is left out, is "localhost"
 	port: 8080,
-	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], // Set [] to allow all IP addresses
+	// ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], // Set [] to allow all IP addresses
 	                                                       // or add a specific IPv4 of 192.168.1.5 :
 	                                                       // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
 	                                                       // or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
 	                                                       // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
+	ipWhitelist: [],
 
-	language: "en",
+	language: "sk",
 	timeFormat: 24,
 	units: "metric",
 
@@ -39,7 +40,7 @@ var config = {
 		},
 		{
 			module: "calendar",
-			header: "Sviatky",
+			header: "Nadchádzajúce udalosti",
 			position: "top_left",
 			config: {
 				calendars: [
@@ -47,13 +48,15 @@ var config = {
 						symbol: "calendar-check-o ",
 						url: "webcal://calendar.google.com/calendar/ical/petervanco.sk%40gmail.com/private-67fae00ebadf63afa26a74287e283940/basic.ics"
 					}
-				]
+				],
+                maximumEntries: 6,
+                timeFormat: "absolute",
 			}
 		},
-		{
-			module: "compliments",
-			position: "lower_third"
-		},
+		// {
+		// 	module: "compliments",
+		// 	position: "lower_third"
+		// },
 		{
 			module: "currentweather",
 			position: "top_right",
@@ -66,7 +69,7 @@ var config = {
 		{
 			module: "weatherforecast",
 			position: "top_right",
-			header: "Weather Forecast",
+            header: 'Predpoveď počasia - ',
 			config: {
 				location: "Bratislava",
 				locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
@@ -75,7 +78,8 @@ var config = {
 		},
 		{
 			module: "newsfeed",
-			position: "bottom_bar",
+			// position: "bottom_bar",
+			position: "upper_third",
 			config: {
 				feeds: [
 					{
@@ -87,39 +91,39 @@ var config = {
 				showPublishDate: true
 			}
 		},
-        {
-            module: 'MMM-Traffic',
-            position: 'top_left',
-            classes: 'dimmed medium', //optional, default is 'bright medium', only applies to commute info not route_name
-            config: {
-                api_key: 'AIzaSyBqaX-0g6G6idL4X8CMhqXwTE5TYTdWtB0',
-                mode: 'driving',
-                origin: 'Sputnikova 37, Bratislava',
-                destination: 'Wolfsthal Bahnhof',
-                // fri_destination: '1 E 161st St, Bronx, NY 10451',
-                // arrival_time: '0750', //optional, but needs to be in 24 hour time if used.
-                route_name: 'Wolfsthal Bahnhof',
-                changeColor: true,
-                showGreen: true,
-                limitYellow: 5, //Greater than 5% of journey time due to traffic
-                limitRed: 20, //Greater than 20% of journey time due to traffic
-                traffic_model: 'pessimistic',
-                interval: 120000, //2 minutes
-                showWeekend: true,
-                allTime: false,
-
-                map: true,
-                key: 'AIzaSyCtJwOZjqh2Um11gppjrkIGfvA1hcYfucA',
-                lat: 37.8262306,
-                lng: -122.2920096,
-                height: '300px',
-                width: '300px'
-            }
-        },
+        // {
+        //     module: 'MMM-Traffic',
+        //     position: 'top_left',
+        //     classes: 'dimmed medium', //optional, default is 'bright medium', only applies to commute info not route_name
+        //     config: {
+        //         api_key: 'AIzaSyBqaX-0g6G6idL4X8CMhqXwTE5TYTdWtB0',
+        //         mode: 'driving',
+        //         origin: 'Sputnikova 37, Bratislava',
+        //         destination: 'Wolfsthal Bahnhof',
+        //         // fri_destination: '1 E 161st St, Bronx, NY 10451',
+        //         // arrival_time: '0750', //optional, but needs to be in 24 hour time if used.
+        //         route_name: 'Wolfsthal Bahnhof',
+        //         changeColor: true,
+        //         showGreen: true,
+        //         limitYellow: 5, //Greater than 5% of journey time due to traffic
+        //         limitRed: 20, //Greater than 20% of journey time due to traffic
+        //         traffic_model: 'pessimistic',
+        //         interval: 120000, //2 minutes
+        //         showWeekend: true,
+        //         allTime: false,
+        //
+        //         map: true,
+        //         key: 'AIzaSyCtJwOZjqh2Um11gppjrkIGfvA1hcYfucA',
+        //         lat: 37.8262306,
+        //         lng: -122.2920096,
+        //         height: '300px',
+        //         width: '300px'
+        //     }
+        // },
         {
             module: 'MMM-MyCommute',
             position: 'top_left',
-            header: 'Traffic',
+            header: 'Cesta do práce',
             classes: 'default everyone',
             config: {
                 apikey: 'AIzaSyBqaX-0g6G6idL4X8CMhqXwTE5TYTdWtB0',
@@ -134,12 +138,24 @@ var config = {
                         mode: 'driving',
                         color: '#82E5AA',
                         alternatives: true,
+						map: {
+                        	zoom: 12,
+                            height: '200px',
+                            width: '334px',
+                        },
+                        tts: 'Cesta do Wolfsthalu bude trvať {duration} minút',
                     },
                     {
                         destination: 'Sandvik, Bratislava',
                         label: 'Sandvik',
                         mode: 'transit',
                         alternatives: true,
+                        map: {
+                            zoom: 12,
+                            height: '200px',
+                            width: '334px',
+                        },
+                        // tts: 'Cesta do Sandviku bude trvať {duration} minút',
                     },
                     // {
                     //     destination: '55 Mill St, Toronto, ON M5A 3C4',
@@ -165,20 +181,22 @@ var config = {
         //         width: '300px'
         //     }
         // },
-        {
-            module: "MMM-EARTH",
-            position: "bottom_right",
-            config: {
-                mode: "Natural",
-                rotateInterval: 15000,
-                MaxWidth: "30%",
-                MaxHeight: "30%",
-            }
-        },
+
+        // {
+        //     module: "MMM-EARTH",
+        //     position: "bottom_right",
+        //     config: {
+        //         mode: "Natural",
+        //         rotateInterval: 15000,
+        //         MaxWidth: "30%",
+        //         MaxHeight: "30%",
+        //     }
+        // },
+
         {
             module: 'MMM-teamspeak3',
             position: 'top_right',
-            header: 'My TeamSpeak3 server',
+            header: 'TeamSpeak',
             config: {
                 host: '192.168.1.252',
                 serverPort: '9987', // Default server port (not required if default port (9987) is used)
@@ -186,7 +204,7 @@ var config = {
                 serverQueryPort: '10011', // Default server query port (not required if default port (10011) is used)
                 login: 'ServerQuery',
                 passwd: 'df17YfRO',
-                refreshInterval: 10 // in seconds
+                refreshInterval: 60 // in seconds
             }
         },
         // {
@@ -198,6 +216,30 @@ var config = {
         //         plexToken: 'KmiktZGsmuQ2pZnKGDHi',
         //     }
         // },
+
+        {
+            module: 'MMM-RandomPhoto',
+            // position: 'fullscreen_below',
+            position: 'top_right',
+            header: 'Náhodná spomienka',
+            config: {
+                opacity: 1.0,
+                animationSpeed: 1000,
+                updateInterval: 60,
+                url: 'http://192.168.1.252:8181/randomphoto/',
+                width: '334px',
+            }
+        },
+
+        {
+            module: 'MMM-TTS',
+            position: 'top_right',
+            config: {
+                // debug: true,
+                voice: 'sk',
+                speed: 1,
+            }
+        },
 	]
 
 };

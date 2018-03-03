@@ -15,6 +15,9 @@ html {
 
 body {
     font-family: "Roboto", sans-serif;
+    margin: 30px;
+    height: calc(100% - 60px);
+    width: calc(100% - 60px);
 }
 
 .light {
@@ -30,4 +33,26 @@ body {
 .bold {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
+}
+
+.region.upper.third {
+    top: 5%;
+}
+
+a[href^="http://maps.google.com/maps"],
+a[href^="https://maps.google.com/maps"],
+a[href^="https://www.google.com/maps"] {
+    display: none !important;
+}
+
+.gmnoprint:not(.gm-bundled-control) {
+    display: none;
+}
+
+.gm-bundled-control .gmnoprint {
+    display: block;
+}
+
+.gm-style-cc {
+    display: none;
 }

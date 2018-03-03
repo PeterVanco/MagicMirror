@@ -1,3 +1,18 @@
 [submodule "modules/MMM-EARTH"]
 	path = modules/MMM-EARTH
 	url = https://github.com/PeterVanco/MMM-EARTH.git
+	branch = master
+[submodule "modules/MMM-RandomPhoto"]
+	path = modules/MMM-RandomPhoto
+	url = https://github.com/PeterVanco/MMM-RandomPhoto.git
+	branch = master
+[submodule "modules/MMM-MyCommute"]
+	path = modules/MMM-MyCommute
+	url = https://github.com/PeterVanco/MMM-MyCommute.git
+	branch = master
+[submodule "modules/MMM-TTS"]
+	path = modules/MMM-TTS
+	url = https://github.com/PeterVanco/MMM-TTS.git
+[submodule "modules/MMM-teamspeak3"]
+	path = modules/MMM-teamspeak3
+	url = https://github.com/PeterVanco/MMM-teamspeak3.git
