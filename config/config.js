@@ -1,13 +1,3 @@
-/* Magic Mirror Config Sample
- *
- * By Michael Teeuw http://michaelteeuw.nl
- * MIT Licensed.
- *
- * For more information how you can configurate this file
- * See https://github.com/MichMich/MagicMirror#configuration
- *
- */
-
 var config = {
     address: "0.0.0.0", // Address to listen on, can be:
     // - "localhost", "127.0.0.1", "::1" to listen on loopback interface
@@ -31,16 +21,19 @@ var config = {
             module: "alert",
             classes: "default everyone",
         },
+
         {
             module: "updatenotification",
             position: "top_bar",
             classes: "default everyone",
         },
+
         {
             module: "clock",
             position: "top_left",
             classes: "default everyone",
         },
+
         {
             module: "calendar",
             header: "Nadchádzajúce udalosti",
@@ -57,10 +50,12 @@ var config = {
                 timeFormat: "absolute",
             }
         },
+
         // {
         // 	module: "compliments",
         // 	position: "lower_third"
         // },
+
         {
             module: "currentweather",
             position: "top_right",
@@ -71,6 +66,7 @@ var config = {
                 appid: "635812f7c274c750fc5566f604778133"
             }
         },
+
         {
             module: "weatherforecast",
             position: "top_right",
@@ -82,6 +78,7 @@ var config = {
                 appid: "635812f7c274c750fc5566f604778133"
             }
         },
+
         {
             module: "newsfeed",
             // position: "bottom_bar",
@@ -98,6 +95,7 @@ var config = {
                 showPublishDate: true
             }
         },
+
         {
             module: 'MMM-MyCommute',
             position: 'top_left',
@@ -109,6 +107,7 @@ var config = {
                 startTime: '00:00',
                 endTime: '23:59',
                 // hideDays: [0,6],
+                pollFrequency: 3 * 60 * 1000, //every ten minutes, in milliseconds
                 destinations: [
                     {
                         destination: 'Wolfsthal Bahnhof, Bratislava',
@@ -127,6 +126,7 @@ var config = {
                         destination: 'Sandvik, Bratislava',
                         label: 'Sandvik',
                         mode: 'transit',
+                        color: '#82E5AA',
                         alternatives: true,
                         map: {
                             zoom: 12,
@@ -166,15 +166,16 @@ var config = {
                 refreshInterval: 60 // in seconds
             }
         },
+
         {
             module: 'MMM-RandomPhoto',
             position: 'top_right',
             header: 'Náhodná spomienka',
-            classes: 'everyone peter veronika',
+            classes: 'default everyone peter veronika',
             config: {
                 opacity: 1.0,
                 animationSpeed: 1000,
-                updateInterval: 60,
+                updateInterval: 15,
                 url: 'http://192.168.1.252:8181/randomphoto/',
                 width: '334px',
             }
@@ -190,6 +191,7 @@ var config = {
                 speed: 1,
             }
         },
+
         {
             module: 'MMM-Facial-Recognition-OCV3',
             config: {
@@ -225,10 +227,10 @@ var config = {
             config: {
                 updateInterval: 10000,
                 animationSpeed: 1000,
-                align: 'right', // align labels
-                //header: 'System Stats', // This is optional
+                align: 'right',
             },
         },
+
     ]
 
 };
