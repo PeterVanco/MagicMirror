@@ -12,6 +12,8 @@ var config = {
     // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
     ipWhitelist: [],
 
+    electronOptions: { fullscreen: false, width: 1400, height: 800 },
+
     language: "sk",
     timeFormat: 24,
     units: "metric",
@@ -22,11 +24,11 @@ var config = {
             classes: "default everyone",
         },
 
-        {
-            module: "updatenotification",
-            position: "top_bar",
-            classes: "default everyone",
-        },
+//        {
+//            module: "updatenotification",
+//            position: "top_bar",
+//            classes: "default everyone",
+//        },
 
         {
             module: "clock",
@@ -226,8 +228,8 @@ var config = {
             classes: 'default everyone small dimmed', // Add your own styling. Optional.
             config: {
                 updateInterval: 10000,
-                animationSpeed: 1000,
-                align: 'right',
+                animationSpeed: 0,
+                align: 'right', // align labels
             },
         },
 
