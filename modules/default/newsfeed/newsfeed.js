@@ -96,7 +96,10 @@ Module.register("newsfeed",{
 
 		if (this.newsItems.length > 0) {
 
-            // this.sendNotification('MMM-TTS', this.newsItems[this.activeItem].title);
+			// clearTimeout(this.timeout);
+            // this.timeout = setTimeout(() => {
+             //    this.sendNotification('MMM-TTS', this.newsItems[this.activeItem].title);
+			// }, 1000);
 
             // this.config.showFullArticle is a run-time configuration, triggered by optional notifications
 			if (!this.config.showFullArticle && (this.config.showSourceTitle || this.config.showPublishDate)) {
