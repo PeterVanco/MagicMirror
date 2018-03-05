@@ -108,8 +108,11 @@ var config = {
                 origin: 'Sputniková 37, Bratislava',
                 startTime: '00:00',
                 endTime: '23:59',
+                pollFrequency: 10 * 60 * 1000,
+                // startTime: '06:20',
+                // endTime: '08:40',
                 // hideDays: [0,6],
-                pollFrequency: 3 * 60 * 1000, //every ten minutes, in milliseconds
+                // pollFrequency: 2 * 60 * 1000,
                 destinations: [
                     {
                         destination: 'Wolfsthal Bahnhof, Bratislava',
