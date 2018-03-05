@@ -12,7 +12,7 @@ var config = {
     // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
     ipWhitelist: [],
 
-    electronOptions: { fullscreen: false, width: 1400, height: 800 },
+    electronOptions: {fullscreen: false, width: 1400, height: 800},
 
     language: "sk",
     timeFormat: 24,
@@ -199,6 +199,7 @@ var config = {
 
         {
             module: 'MMM-Facial-Recognition-OCV3',
+            classes: 'default everyone motion',
             config: {
                 // Threshold for the confidence of a recognized face before it's considered a
                 // positive match.  Confidence values below this threshold will be considered
@@ -220,19 +221,34 @@ var config = {
                 //Set of modules which should be shown for every user
                 everyoneClass: "everyone",
                 // Boolean to toggle welcomeMessage
-                welcomeMessage: true
+                welcomeMessage: true,
+
+                motionStopDelay: 60,
+                motionDetectionThreshold: 1000,
+                turnOffDisplay: true,
+                stayAwakeAfterMotionStop: 60,
             }
         },
 
         {
             module: 'MMM-SystemStats',
-            position: 'bottom_right', // This can be any of the regions.
+            position: 'bottom_right',
             header: 'Systém',
-            classes: 'default everyone small dimmed', // Add your own styling. Optional.
+            classes: 'default everyone small dimmed',
             config: {
                 updateInterval: 10000,
                 animationSpeed: 0,
-                align: 'right', // align labels
+                align: 'right',
+            },
+        },
+
+        {
+            module: 'MMM-Debug',
+            position: 'bottom_right',
+            header: 'Debug',
+            classes: 'default everyone',
+            config: {
+                debug: true,
             },
         },
 
