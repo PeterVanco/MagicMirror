@@ -1,0 +1,23 @@
+{
+  "name": "mmm-notification",
+  "version": "1.0.0",
+  "description": "Notification (compliments-like) module for MagicMirror2",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "keywords": [
+    "MagicMirror"
+  ],
+  "author": "PeterVanco",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "dependencies": {
+    "google-translate-token": "^1.0.0",
+    "google-tts-api": "0.0.2",
+    "say": "^0.9.0"
+  }
+}
