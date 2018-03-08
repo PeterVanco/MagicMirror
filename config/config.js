@@ -118,7 +118,8 @@ var config = {
                 // startTime: '06:20',
                 // endTime: '08:40',
                 // hideDays: [0,6],
-                // pollFrequency: 2 * 60 * 1000,
+                // pollFrequency: 1 * 60 * 1000,
+                nextTransitVehicleDepartureFormat: "odchod o [next at]",
                 destinations: [
                     {
                         destination: 'Wolfsthal Bahnhof, Bratislava',
@@ -139,11 +140,13 @@ var config = {
                         mode: 'transit',
                         color: '#82E5AA',
                         alternatives: true,
+                        showNextVehicleDeparture: true,
                         map: {
                             zoom: 12,
                             height: '200px',
                             width: '334px',
                         },
+                        tts: 'Cesta do Sandviku bude trvať {duration} minút',
                     },
                 ]
             }
@@ -199,7 +202,7 @@ var config = {
             config: {
                 // debug: true,
                 voice: 'sk',
-                speed: 1,
+                speed: 1.2,
             }
         },
 
@@ -219,7 +222,7 @@ var config = {
                 // recognition intervall in seconds (smaller number = faster but CPU intens!)
                 interval: 0,
                 // Logout delay after last recognition so that a user does not get instantly logged out if he turns away from the mirror for a few seconds
-                logoutDelay: 5,
+                logoutDelay: 30,
                 // Array with usernames (copy and paste from training script)
                 users: ['peter'],
                 //Module set used for strangers and if no user is detected
