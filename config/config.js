@@ -205,7 +205,7 @@ var config = {
                 // positive match.  Confidence values below this threshold will be considered
                 // a positive match because the lower the confidence value, or distance, the
                 // more confident the algorithm is that the face was correctly detected.
-                threshold: 10,
+                threshold: 40,
                 // force the use of a usb webcam on raspberry pi (on other platforms this is always true automatically)
                 useUSBCam: true,
                 // Path to your training xml
