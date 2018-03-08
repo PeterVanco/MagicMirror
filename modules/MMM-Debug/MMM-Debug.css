@@ -1,0 +1,40 @@
+.MMM-Debug #debug-notification {
+    float: left;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    margin: 5px 0;
+    padding: 5px;
+    width: calc(75% - 10px);
+}
+
+.MMM-Debug #debug-send-button {
+    float: right;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: 1px white solid;
+    padding: 5px;
+    width: 20%;
+    margin: 5px 0;
+}
+
+.MMM-Debug div {
+    line-height: 1.2em;
+    font-size: 18px;
+}
+
+.MMM-Debug #debug-send-button:hover {
+    border: 1px solid #a3ea80;
+}
+
+.MMM-Debug #debug-payload {
+    display: block;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    width: calc(100% - 12px);
+    clear: both;
+    min-width: 240px;
+}

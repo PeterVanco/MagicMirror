@@ -59,6 +59,12 @@ var config = {
         // },
 
         {
+        	module: "MMM-Notification",
+            classes: "default everyone peter veronika",
+        	position: "lower_third"
+        },
+
+        {
             module: "currentweather",
             position: "top_right",
             classes: "default",
