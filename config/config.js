@@ -67,7 +67,7 @@ var config = {
         {
             module: "currentweather",
             position: "top_right",
-            classes: "default",
+            classes: "default everyone",
             config: {
                 location: "Bratislava",
                 locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
