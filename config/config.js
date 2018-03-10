@@ -251,15 +251,15 @@ var config = {
             },
         },
 
-        {
-            module: 'MMM-Debug',
-            position: 'bottom_right',
-            header: 'Debug',
-            classes: 'default everyone',
-            config: {
-                debug: true,
-            },
-        },
+        // {
+        //     module: 'MMM-Debug',
+        //     position: 'bottom_right',
+        //     header: 'Debug',
+        //     classes: 'default everyone',
+        //     config: {
+        //         debug: true,
+        //     },
+        // },
 
     ]
 
